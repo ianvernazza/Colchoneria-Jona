@@ -1,0 +1,676 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(212, 210, 210);
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-attachment: fixed; /* Hace que la imagen quede fija al hacer scroll */
+    height: 100vh;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  header {
+    background-color: rgb(163, 150, 150);
+    text-align: center;
+  }
+  
+  /* Estilo general para la barra de navegación */
+  .navbar {
+    background-color: #bdb5b5; /* Color gris claro para el fondo */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #4e4e4e; /* Color gris oscuro para las letras */
+    padding: 10px 15px; /* Espaciado interno para los enlaces */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #929292; /* Color gris más oscuro al pasar el ratón sobre los enlaces */
+  }
+  
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid #8b8b8b; /* Línea blanca de separación entre los elementos */
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none; /* Elimina la línea en el último elemento */
+  }
+  
+  .navbar-nav .nav-link img {
+    vertical-align: middle; /* Alinea verticalmente las imágenes con el texto */
+    margin-right: 8px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .carousel-container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    overflow: hidden; /* Oculta partes del contenido que desborden */
+    position: relative; /* Para posicionamiento relativo */
+  }
+  
+  .carousel {
+    display: flex; /* Alineación en fila de los elementos */
+    transition: transform 0.5s ease; /* Animación de transición */
+  }
+  
+  .carousel-item {
+    min-width: 100%; /* Cada elemento ocupa el ancho completo */
+    overflow: hidden; /* Oculta partes del contenido que desborden */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    box-shadow: 4px 4px 20px #444;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 20px;
+  }
+  
+  .imgCaroucel1 {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    object-fit: cover; /* La imagen cubre el área del contenedor */
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 85%,
+      50% 100%,
+      0 85%
+    ); /* Forma de pico en la parte inferior */
+  }
+  
+  .informacion {
+    background-color: rgb(163, 150, 150); /* Fondo con gradiente */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Sombra del texto para legibilidad */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 20px 4px 50px rgb(163, 150, 150);
+    font-family: "Arial", sans-serif; /* Tipografía moderna */
+    color: #ffffff; /* Texto en color blanco */
+    padding: 40px; /* Espaciado interno */
+    max-width: 600px; /* Ancho máximo del contenido */
+    margin: 40px; /* Margen exterior */
+    margin-top: 40px;
+  }
+  
+  .infTitulo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-family: "Arial", sans-serif; /* Tipografía moderna */
+    font-size: 3rem; /* Tamaño de fuente grande */
+    font-weight: bold;
+    text-align: center;
+    color: #585656; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px; /* Margen para separación */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Sombra del texto para legibilidad */
+    position: relative; /* Posición relativa para colocar la línea separadora */
+  }
+  
+  h1::after {
+    content: "";
+    display: block;
+    width: 100%; /* Ancho completo de la página */
+    height: 2px; /* Altura de la línea */
+    background-color: #585656; /* Color de la línea */
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Espaciado debajo del texto */
+  }
+  
+  h2 {
+    font-family: "Arial", sans-serif; /* Tipografía moderna */
+    font-size: 3rem; /* Tamaño de fuente grande */
+    font-weight: bold;
+    text-align: center;
+    color: #585656; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px; /* Margen para separación */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Sombra del texto para legibilidad */
+    position: relative; /* Posición relativa para colocar la línea separadora */
+  }
+  
+  h2::before {
+    content: "";
+    display: block;
+    width: 100%; /* Ancho completo de la página */
+    height: 2px; /* Altura de la línea */
+    background-color: #585656; /* Color de la línea */
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Espaciado debajo del texto */
+  }
+  
+  h3 {
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: "Arial", sans-serif; /* Tipografía moderna */
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    font-weight: bold;
+    text-align: center;
+    color: #363333; /* Color del texto */
+  }
+  
+  h5 {
+    font-size: 2rem;
+  }
+  
+  .Logo img {
+    width: 200px;
+  }
+  
+  .card {
+    margin-bottom: 15px;
+    background-color: rgb(163, 150, 150);
+    color: white;
+    border-style: none;
+    width: 25rem;
+    box-shadow: 10px 4px 30px #444;
+    overflow: hidden; /* Asegura que el contenido extra no se desborde */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    max-height: 400px; /* Máxima altura para mantener la proporción */
+    object-fit: cover; /* Cubre el área de la tarjeta sin distorsionar */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card li {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
+  
+  .card a {
+    text-decoration: none;
+    color: white;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel2 {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+  }
+  
+  #toggleButton55,
+  #toggleButton9 {
+    background-color: rgb(
+      227,
+      252,
+      206
+    ); /* Elimina el fondo predeterminado del botón */
+    border: none; /* Elimina el borde predeterminado del botón */
+    border-radius: 2rem;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    padding: 0.5rem 1rem; /* Agrega algo de espacio alrededor del contenido */
+    display: flex; /* Usa flexbox para alinear los iconos y el texto */
+    align-items: center; /* Alinea verticalmente el contenido */
+    font-size: 18px;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    color: rgba(49, 136, 22, 0.671);
+  }
+  
+  #toggleButton55 img,
+  #toggleButton9 img {
+    width: 20px; /* Ajusta el tamaño del icono */
+    height: auto; /* Mantiene la proporción del icono */
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+  }
+  
+  /* Estilo general para listas dentro de card-body */
+  .card-body ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+  }
+  
+  .card-body ul li {
+    padding: 10px 15px; /* Añade espacio interno */
+    border-bottom: 1px solid white; /* Línea blanca de separación en la parte inferior */
+    margin: 0; /* Elimina el margen entre elementos */
+    box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el tamaño total del elemento */
+  }
+  
+  .card-body ul li:last-child {
+    border-bottom: none; /* Elimina la línea en el último elemento */
+  }
+  
+  .card-body ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit; /* Hereda el color del elemento padre */
+    display: block; /* Hace que el enlace ocupe el ancho completo del elemento li */
+    width: 100%; /* Asegura que el enlace se ajuste al ancho del elemento li */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total del enlace */
+  }
+  
+  .card-body button {
+    display: block;
+    margin: 1rem 0; /* Espacio alrededor del botón */
+  }
+  
+  @media (min-width: 768px) {
+    header {
+      background-color: rgb(163, 150, 150);
+    }
+  
+    nav {
+      text-align: center;
+    }
+  
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px; /* Espacio entre tarjetas */
+      justify-content: center; /* Centra las tarjetas horizontalmente */
+    }
+  
+    h1 {
+      padding: 3rem;
+      width: 100%;
+      text-align: center;
+    }
+  
+    h2 {
+      display: none;
+    }
+  
+    h5 {
+      font-size: 9rem;
+      text-align: center;
+    }
+  
+    p {
+      font-size: 1.3rem;
+    }
+  
+    a {
+      font-size: 1.2rem;
+    }
+  
+    .navbar-nav .nav-item {
+      border-bottom: none; /* Línea blanca de separación entre los elementos */
+    }
+  
+    .informacion {
+      background-color: rgb(163, 150, 150); /* Fondo con gradiente */
+      border-radius: 12px; /* Bordes redondeados */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra suave */
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Sombra del texto para legibilidad */
+      color: #ffffff; /* Texto en color blanco */
+      padding: 40px; /* Espaciado interno */
+      width: 90%; /* Ancho del div */
+      max-width: 800px; /* Ancho máximo del contenido */
+      margin: 40px auto;
+    }
+  
+    .informacion p {
+      font-size: 1.5rem; /* Tamaño del texto */
+      line-height: 1.8; /* Altura de línea */
+    }
+  
+    .infTitulo {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    .card {
+      background-color: rgb(163, 150, 150);
+      border-radius: 8px;
+      width: calc(33.333% - 20px); /* Tres tarjetas por fila con un margen */
+      box-shadow: 0 8px 13px rgba(0, 0, 0, 0.1);
+      overflow: hidden; /* Para que la imagen no se desborde de la tarjeta */
+      margin: 5px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .card img {
+      width: 100%;
+      height: 200px; /* Altura fija para todas las imágenes */
+      object-fit: cover; /* La imagen cubre el área de la tarjeta sin distorsionarse */
+      border-bottom: 1px solid #ddd; /* Línea divisoria entre imagen y contenido */
+    }
+  
+    #Sabanas img {
+      width: 100%;
+      height: 500px; /* Altura fija para todas las imágenes */
+      object-fit: cover;
+    }
+  
+    .card-body {
+      padding: 15px;
+      flex-grow: 1; /* Permite que el contenido de la tarjeta crezca y ocupe el espacio disponible */
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .card-body h5 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #fff;
+    }
+  
+    .card-body p {
+      margin-bottom: 15px;
+      color: #fff;
+      flex-grow: 1; /* Hace que el párrafo ocupe el espacio restante en el cuerpo de la tarjeta */
+    }
+  
+    .card-body button {
+      align-self: center;
+      padding: 10px 20px;
+      background-color: #857f7f;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    .card-body button:hover {
+      background-color: #ff6f61;
+      color: #fff;
+    }
+    /* Asegúrate de que el contenedor del carrusel ocupe todo el ancho de la pantalla */
+    .carousel-container {
+      width: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+  
+    /* Configura las imágenes del carrusel para que se ajusten correctamente */
+    .carousel-item img.imgCaroucel1 {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+      max-height: 750px; /* Limita la altura máxima de las imágenes */
+    }
+  
+    /* Asegúrate de que el carrusel ocupe todo el ancho de la pantalla */
+    .carousel {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    /* Agrega una punta decorativa debajo del carrusel */
+    .carousel-container::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-top: 10px solid #000; /* Cambia el color según tu preferencia */
+      margin: 0 auto;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .carousel2 {
+      display: flex;
+      overflow: hidden;
+      width: 80%;
+      margin: auto;
+      position: relative;
+    }
+  
+    .carousel-item {
+      min-width: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+  
+    .carousel-item img {
+      width: 100%; /* Ajusta la imagen al ancho del contenedor */
+      height: auto; /* Altura automática para mantener la proporción */
+      object-fit: cover;
+    }
+  
+    /* Asegura que los botones se vean bien en PC */
+    #toggleButton55,
+    #toggleButton9 {
+      background-color: white; /* Elimina el fondo predeterminado del botón */
+      border: none; /* Elimina el borde predeterminado del botón */
+      border-radius: 2rem;
+      cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+      padding: 0.5rem 1rem; /* Agrega algo de espacio alrededor del contenido */
+      display: flex; /* Usa flexbox para alinear los iconos y el texto */
+      align-items: center; /* Alinea verticalmente el contenido */
+      font-size: 18px;
+      font-family: "Arial", sans-serif;
+      font-weight: bold;
+      color: rgba(49, 136, 22, 0.671);
+    }
+  
+    #toggleButton55 img,
+    #toggleButton9 img {
+      width: 20px; /* Ajusta el tamaño del icono */
+      height: auto; /* Mantiene la proporción del icono */
+      margin-right: 8px; /* Espacio entre el icono y el texto */
+    }
+  
+    footer {
+      background-color: rgb(163, 150, 150);
+      padding: 2rem;
+      text-align: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+  
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .social-media a {
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+    }
+  
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s;
+    }
+  
+    .social-media a:hover .social-icon {
+      transform: scale(1.1);
+    }
+  
+    .social-media a:hover {
+      color: #ffeb3b;
+    }
+  
+    .footer-bottom {
+      border-top: 1px solid #fff;
+      padding-top: 1rem;
+    }
+  
+    .footer-bottom p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+  
+    .social-media {
+      flex-direction: row;
+    }
+  
+    .social-media a {
+      font-size: 0.9rem;
+    }
+  
+    .social-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #c3ccc4;
+    color: rgb(14, 14, 14);
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  
+  #toggleButton1,
+  #toggleButton2,
+  #toggleButton3,
+  #toggleButton4,
+  #toggleButton5,
+  #toggleButton6,
+  #toggleButton7,
+  #toggleButton8,
+  #toggleButton9 {
+    transition: 0.3s;
+  }
+  
+  #toggleButton1:hover,
+  #toggleButton2:hover,
+  #toggleButton3:hover,
+  #toggleButton4:hover,
+  #toggleButton5:hover,
+  #toggleButton6:hover,
+  #toggleButton7:hover,
+  #toggleButton8:hover,
+  #toggleButton9:hover {
+    padding: 1.5rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 5px 0;
+  }
+  
+  footer {
+    background-color: rgb(163, 150, 150);
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .social-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .social-media a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s;
+  }
+  
+  .social-media a:hover .social-icon {
+    transform: scale(1.3);
+  }
+  
+  .social-media a:hover {
+    color: #000000;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #fff;
+    padding-top: 1rem;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .social-media a {
+    font-size: 0.8rem;
+  }
+  
+  .social-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+  
